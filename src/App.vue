@@ -7,9 +7,9 @@
           <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Voce</th>
-            <th scope="col">spesa mensile</th>
-            <th scope="col">spesa annuale</th>
+            <th scope="col">Positions</th>
+            <th scope="col">Monthly cost</th>
+            <th scope="col">Yearly cost</th>
             <th></th>
           </tr>
           </thead>
@@ -19,7 +19,7 @@
           <tfoot>
           <tr>
             <th scope="col"></th>
-            <th scope="col">Totale</th>
+            <th scope="col">Sum</th>
             <th scope="col">{{ monthlySum | toCurrency }}</th>
             <th scope="col">{{ yearlySum | toCurrency }}</th>
             <th></th>
@@ -28,14 +28,14 @@
         </table>
 
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="inserisci voce" aria-label="Cost description" v-model="description">
-          <input type="text" class="form-control" placeholder="inserisci categoria" aria-label="Cost category" v-model="category">
-          <input type="number" class="form-control" placeholder="inserisci costo" aria-label="Cost" v-model="cost">
+          <input type="text" class="form-control" placeholder="new position" aria-label="Cost description" v-model="description">
+          <input type="text" class="form-control" placeholder="category" aria-label="Cost category" v-model="category">
+          <input type="number" class="form-control" placeholder="cost" aria-label="Cost" v-model="cost">
           <div class="input-group-append">
-            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">cadenza</button>
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">cadence</button>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#" @click="addRow('montly')">mensile</a>
-              <a class="dropdown-item" href="#" @click="addRow('yearly')">annuale</a>
+              <a class="dropdown-item" href="#" @click="addRow('montly')">monthly</a>
+              <a class="dropdown-item" href="#" @click="addRow('yearly')">yearly</a>
             </div>
           </div>
         </div>
