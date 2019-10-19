@@ -1,4 +1,7 @@
 # my-expenses
+Small application to track personal expenses, written in VueJs.
+
+Deployed on Heroku: https://secret-cliffs-66011.herokuapp.com
 
 ## Project setup
 ```
